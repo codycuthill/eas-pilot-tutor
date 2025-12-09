@@ -1,0 +1,58 @@
+<link rel="stylesheet" href="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/themes/df-messenger-default.css">
+<script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
+<df-messenger
+  project-id="eas-pilot-personal"
+  agent-id="60ddf77f-0d9b-4410-9d4f-49a05fe45613"
+  language-code="en"
+  max-query-length="-1">
+  <df-messenger-chat
+    chat-title="FO Smith">
+  </df-messenger-chat>
+</df-messenger>
+<style>
+  /* 1. POSITIONING & Z-INDEX */
+  df-messenger {
+    z-index: 999;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    
+    /* 2. AVIATION COLOR PALETTE */
+    --df-messenger-font-color: #e2e8f0; /* Light text */
+    --df-messenger-font-family: "Inter", sans-serif;
+    
+    /* Chat Window Background (Dark Cockpit Blue) */
+    --df-messenger-chat-background: #0f172a; 
+    
+    /* User Message (Bright Blue) */
+    --df-messenger-message-user-background: #3b82f6; 
+    --df-messenger-message-user-font-color: #ffffff;
+    
+    /* Bot Message (Slate Grey) */
+    --df-messenger-message-bot-background: #1e293b; 
+    --df-messenger-message-bot-font-color: #e2e8f0;
+    
+    /* Input Area */
+    --df-messenger-input-box-background: #1e293b;
+    --df-messenger-input-font-color: #ffffff;
+    --df-messenger-send-icon: #3b82f6;
+  }
+
+  /* 3. CUSTOMIZE THE BUBBLE LAUNCHER */
+  /* This targets the floating button before you click it */
+  df-messenger::part(button) {
+    background-color: #3b82f6; /* Aviation Blue */
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+  }
+
+  /* 4. CUSTOMIZE THE HEADER */
+  df-messenger::part(titlebar) {
+    background-color: #0f172a;
+    border-bottom: 1px solid #334155;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+</style>
